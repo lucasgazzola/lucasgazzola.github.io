@@ -1,0 +1,26 @@
+---
+import MenuIconLogo from './MenuIconLogo.astro'
+---
+
+<!-- TODO: Add HOVER -->
+<button id="open-menu-button" title="Open menu" type="button">
+  <MenuIconLogo />
+</button>
+
+<script>
+  const handleClick = () => {
+    const menu = document.getElementById('menu')
+    menu?.classList.toggle('hidden')
+  }
+
+  const menuButton = document.getElementById('open-menu-button')
+  menuButton?.addEventListener('click', handleClick)
+</script>
+
+<style>
+  #open-menu-button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
+</style>
