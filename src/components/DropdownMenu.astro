@@ -1,19 +1,19 @@
 <nav id="menu" class="menu-container hidden">
   <ul class="menu-list">
-    <li class="menu-item">
-      <a href="#about">About</a>
+    <li>
+      <a class="menu-item" href="#about">About</a>
     </li>
-    <li class="menu-item">
-      <a href="#projects">Projects</a>
+    <li>
+      <a class="menu-item" href="#projects">Projects</a>
     </li>
-    <li class="menu-item">
-      <a href="#contact">Contact</a>
+    <li>
+      <a class="menu-item" href="#contact">Contact</a>
     </li>
   </ul>
 </nav>
 
 <script>
-  const menuItemsList = document.querySelectorAll('li.menu-item')
+  const menuItemsList = document.querySelectorAll('.menu-item')
 
   const closeMenu = () => {
     const menu = document.getElementById('menu')
@@ -21,8 +21,7 @@
   }
 
   menuItemsList.forEach(menuItem => {
-    const link = menuItem.firstElementChild
-    link?.addEventListener('click', closeMenu)
+    menuItem?.addEventListener('click', closeMenu)
   })
 </script>
 
@@ -49,14 +48,12 @@
     font-weight: 700;
     list-style-type: none;
   }
+
   .menu-item {
-    user-select: none;
-  }
-  .menu-item > a {
     color: #ddd;
     text-decoration: none;
   }
-  .menu-item > a:hover {
+  .menu-item:hover {
     text-decoration: underline;
   }
   .hidden {
