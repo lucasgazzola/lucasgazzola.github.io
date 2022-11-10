@@ -1,18 +1,18 @@
 ---
 import HamburgerMenuButton from './HamburgerMenuButton.astro'
 import DropdownMenu from './DropdownMenu.astro'
+import LinksList from './LinksList.astro'
 const logo = '<LJ />'
 ---
 
 <header class="header">
   <div class="header-content">
-    <a class="menu-item" href="/"><span>{logo}</span></a>
+    <a class="menu-item" href="#"><span>{logo}</span></a>
     <HamburgerMenuButton />
+    <LinksList />
   </div>
   <DropdownMenu />
 </header>
-
-<script></script>
 
 <style>
   span {
@@ -31,8 +31,8 @@ const logo = '<LJ />'
     position: fixed;
     top: 0;
     width: 100%;
-    height: 100px;
-    background-color: #050505;
+    height: var(--nav-bar-height);
+    background-color: var(--nav-bar-color);
     color: #ddd;
     padding: 0 2rem;
   }

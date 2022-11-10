@@ -5,10 +5,30 @@
   --background-color: #111;
   --text-color: #ddd;
 
+  --nav-bar-height: 72px;
+  --nav-bar-color: #050505;
+
   --h1-size: 36px;
   --h2-size: 30px;
   --h3-size: 26px;
   --h4-size: 22px;
 
   --main-font-size: 16px;
+
+  --hamburger-menu-width-limit: 700px;
+}
+
+html {
+  h1 {
+    font-size: var(--h1-size);
+  }
+  h2 {
+    font-size: var(--h2-size);
+  }
+  h3 {
+    font-size: var(--h3-size);
+  }
+  h4 {
+    font-size: var(--h4-size);
+  }
 }

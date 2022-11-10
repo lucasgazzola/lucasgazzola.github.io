@@ -8,29 +8,38 @@ import MenuIconLogo from './MenuIconLogo.astro'
 </button>
 
 <script>
+  const menuButton = document.getElementById('open-menu-button')
+
   const handleClick = () => {
     const menu = document.getElementById('menu')
     menu?.classList.toggle('hidden')
+    menuButton?.classList.toggle('active')
   }
 
-  const menuButton = document.getElementById('open-menu-button')
   menuButton?.addEventListener('click', handleClick)
 </script>
 
 <style>
   #open-menu-button {
     background-color: transparent;
+    color: #ddd;
     outline: none;
     border: none;
+  }
+
+  #open-menu-button.active {
+    color: #0bc28b90;
   }
   /* Add hover if that's possible */
   @media (hover: hover) {
     #open-menu-button:hover {
-      stroke: red;
       cursor: pointer;
     }
-    #open-menu-button:hover > svg {
-      stroke: red;
+  }
+
+  @media (min-width: 700px) {
+    #open-menu-button {
+      display: none;
     }
   }
 </style>

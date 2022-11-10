@@ -4,15 +4,93 @@ const { id, title, description, techs, img, url, github } = Astro.props
 
 <li>
   <div class="project-card">
-    <header><h4>{title}</h4></header>
-    <main>{description}</main>
+    <article>
+      <header><h3>{title}</h3></header>
+      <main><p>{description}</p></main>
+      <div class="image-container">IMAGEN</div>
+      <footer>
+        <a href="" class="project-link">View Live Site</a>
+        <a href="" class="project-link">View GitHub Repo</a>
+      </footer>
+    </article>
   </div>
 </li>
 
 <style>
+  footer {
+    display: flex;
+    gap: 12px;
+  }
+  .project-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 160px;
+    width: 160px;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #09f;
+    text-decoration: none;
+  }
+  .project-link:active {
+    transform: scale(0.99);
+    background-color: #09f8;
+  }
+  a {
+    color: #ddd;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  article {
+    display: flex;
+    gap: 2rem;
+    padding: 0 1rem;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  main {
+    width: 100%;
+  }
+  p {
+    max-width: 80ch;
+    text-align: left;
+
+    line-height: 1.5;
+  }
+  .image-container {
+    width: 250px;
+    border-radius: 5px;
+    contain: content;
+    min-width: 250px;
+    min-height: 250px;
+    font-size: 60px;
+    background-color: #09f8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  li {
+    display: flex;
+    max-width: 900px;
+    /* height: 600px; */
+    justify-items: center;
+    align-items: center;
+  }
   .project-card {
-    height: 450px;
-    /* width: 600px; */
-    background-color: aqua;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  h3 {
+    color: #d819bfab;
   }
 </style>
