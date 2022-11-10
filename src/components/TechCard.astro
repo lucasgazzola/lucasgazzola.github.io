@@ -1,0 +1,22 @@
+---
+const { title } = Astro.props
+---
+
+<!-- TODO: Create the stack card -->
+<li><div><header><h4>{title}</h4></header></div></li>
+
+<style>
+  h4 {
+    font-size: 12px;
+    text-align: center;
+  }
+  div {
+    height: 80px;
+    width: 80px;
+    background-color: rgb(11 194 139/40%);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>

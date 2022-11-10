@@ -42,6 +42,18 @@ const { title } = Astro.props
         color: var(--text-color);
         min-height: 100vh;
       }
+      a::selection {
+        background-color: transparent;
+      }
+      ul {
+        list-style-type: none;
+      }
+      section {
+        padding-top: 100px;
+        gap: 72px;
+        display: flex;
+        flex-direction: column;
+      }
     </style>
   </body>
 </html>

@@ -3,7 +3,7 @@ const aboutContent = `Lorem ipsum dolor sit amet consectetur adipisicing elit. V
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ea praesentium minima laborum nam, voluptas voluptatum libero veniam quas. Ipsam animi nobis beatae. Deleniti reprehenderit fuga suscipit inventore vero atque.`
 ---
 
-<section>
+<section id="about">
   <header><h3 class="section-title">About Me</h3></header>
   <main><p class="aboutme-content">{aboutContent}</p></main>
 </section>
@@ -20,18 +20,15 @@ const aboutContent = `Lorem ipsum dolor sit amet consectetur adipisicing elit. V
   section {
     display: flex;
     flex-direction: column;
-    gap: 72px;
   }
   main {
     width: 100%;
     padding: 0 36px;
   }
-  section {
-    padding: 72px;
-  }
   p {
     text-align: left;
     max-width: 70ch;
+    text-align: justify;
     line-height: 1.5;
     margin: auto;
   }

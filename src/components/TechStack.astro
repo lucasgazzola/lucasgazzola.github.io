@@ -1,3 +1,54 @@
+---
+import TechCard from './TechCard.astro'
+
+const techStack = [
+  { id: 1, title: 'HTML' },
+  { id: 2, title: 'CSS' },
+  { id: 3, title: 'JavaScript' },
+  { id: 4, title: 'TypeScript' },
+  { id: 5, title: 'Node.js' },
+  { id: 6, title: 'Express.js' },
+  { id: 7, title: 'React.js' },
+  { id: 8, title: 'Next.js' },
+  { id: 9, title: 'PostgreSQL' },
+  { id: 10, title: 'MongoDB' },
+  { id: 11, title: 'Tailwind' },
+  { id: 12, title: 'GitHub' },
+  { id: 13, title: 'Prisma' },
+  { id: 14, title: 'VSCode' },
+  { id: 15, title: 'Figma' },
+]
+---
+
 <section>
   <header><h3 class="section-title">My Stack</h3></header>
+  <main><ul>{techStack.map(tech => <TechCard title={tech.title} />)}</ul></main>
 </section>
+
+<style>
+  ul {
+    margin: auto;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 3rem;
+    max-width: 650px;
+  }
+
+  @media (max-width: 760px) {
+    ul {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media (max-width: 450px) {
+    ul {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 320px) {
+    ul {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

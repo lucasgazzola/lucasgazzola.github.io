@@ -1,0 +1,70 @@
+---
+import ProjectCard from './ProjectCard.astro'
+
+const projects = [
+  {
+    id: 0,
+    title: 'my-proect',
+    description: 'this is a really interesting project',
+    techs: [],
+    img: {
+      src: '',
+      alt: 'image description',
+    },
+    url: '',
+    github: '',
+  },
+  {
+    id: 1,
+    title: 'my-proect',
+    description: 'this is a really interesting project',
+    techs: [],
+    img: {
+      src: '',
+      alt: 'image description',
+    },
+    url: '',
+    github: '',
+  },
+  {
+    id: 2,
+    title: 'my-proect',
+    description: 'this is a really interesting project',
+    techs: [],
+    img: {
+      src: '',
+      alt: 'image description',
+    },
+    url: '',
+    github: '',
+  },
+  {
+    id: 3,
+    title: 'my-proect',
+    description: 'this is a really interesting project',
+    techs: [],
+    img: {
+      src: '',
+      alt: 'image description',
+    },
+    url: '',
+    github: '',
+  },
+]
+---
+
+<section id="projects">
+  <h2 class="section-title">My Projects</h2>
+  <ul>{projects.map(project => <ProjectCard {...project} />)}</ul>
+</section>
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+  }
+</style>

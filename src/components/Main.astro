@@ -1,4 +1,4 @@
-<section>
+<section id="home">
   <header class="title-container">
     <h1 class="name-container">Lucas Gazzola</h1>
     <h2 class="job-title-container">Fullstack Developer</h2>
@@ -32,14 +32,11 @@
 
   section {
     width: 100%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 48px;
     justify-content: center;
-    margin-top: 100px;
+    /* margin-top: 100px; */
     /* 100 viewport heigth minus header's height(100px)  */
-    height: calc(100vh - 100px);
+    height: 100vh;
     /* height: 100vh; */
   }
   main {
@@ -52,6 +49,10 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
+  }
+  h1,
+  h2 {
+    text-align: center;
   }
   .name-container {
     font-size: var(--h1-size);

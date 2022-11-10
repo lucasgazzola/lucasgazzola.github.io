@@ -1,16 +1,30 @@
 <nav id="menu" class="menu-container hidden">
   <ul class="menu-list">
     <li class="menu-item">
-      <a href="/about">About</a>
+      <a href="#about">About</a>
     </li>
     <li class="menu-item">
-      <a href="/projects">Projects</a>
+      <a href="#projects">Projects</a>
     </li>
     <li class="menu-item">
-      <a href="/contact">Contact</a>
+      <a href="#contact">Contact</a>
     </li>
   </ul>
 </nav>
+
+<script>
+  const menuItemsList = document.querySelectorAll('li.menu-item')
+
+  const closeMenu = () => {
+    const menu = document.getElementById('menu')
+    !menu?.classList.contains('hidden') && menu?.classList.add('hidden')
+  }
+
+  menuItemsList.forEach(menuItem => {
+    const link = menuItem.firstElementChild
+    link?.addEventListener('click', closeMenu)
+  })
+</script>
 
 <style>
   .menu-container {
@@ -35,7 +49,9 @@
     font-weight: 700;
     list-style-type: none;
   }
-
+  .menu-item {
+    user-select: none;
+  }
   .menu-item > a {
     color: #ddd;
     text-decoration: none;

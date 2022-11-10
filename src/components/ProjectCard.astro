@@ -1,0 +1,18 @@
+---
+const { id, title, description, techs, img, url, github } = Astro.props
+---
+
+<li>
+  <div class="project-card">
+    <header><h4>{title}</h4></header>
+    <main>{description}</main>
+  </div>
+</li>
+
+<style>
+  .project-card {
+    height: 450px;
+    /* width: 600px; */
+    background-color: aqua;
+  }
+</style>
