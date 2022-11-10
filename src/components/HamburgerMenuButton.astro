@@ -23,4 +23,14 @@ import MenuIconLogo from './MenuIconLogo.astro'
     outline: none;
     border: none;
   }
+  /* Add hover if that's possible */
+  @media (hover: hover) {
+    #open-menu-button:hover {
+      stroke: red;
+      cursor: pointer;
+    }
+    #open-menu-button:hover > svg {
+      stroke: red;
+    }
+  }
 </style>

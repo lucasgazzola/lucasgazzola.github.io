@@ -1,0 +1,14 @@
+:root {
+  --primary-color: rgb(11, 194, 139);
+  --secondary-color: rgb(157, 192, 182);
+
+  --background-color: #111;
+  --text-color: #ddd;
+
+  --h1-size: 36px;
+  --h2-size: 30px;
+  --h3-size: 26px;
+  --h4-size: 22px;
+
+  --main-font-size: 16px;
+}

@@ -1,7 +1,38 @@
-<section><h2>About Me</h2></section>
+---
+const aboutContent = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ipsum magnam doloremque molestiae cumque! Labore, deleniti, quas architecto earum praesentium molestiae incidunt ullam corporis, quibusdam aut tempore obcaecati dicta atque!
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ea praesentium minima laborum nam, voluptas voluptatum libero veniam quas. Ipsam animi nobis beatae. Deleniti reprehenderit fuga suscipit inventore vero atque.`
+---
+
+<section>
+  <header><h3 class="section-title">About Me</h3></header>
+  <main><p class="aboutme-content">{aboutContent}</p></main>
+</section>
+
+<style is:global>
+  .section-title {
+    text-align: center;
+    font-size: var(--h3-size);
+    color: var(--primary-color);
+  }
+</style>
 
 <style>
   section {
-    height: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+  }
+  main {
+    width: 100%;
+    padding: 0 36px;
+  }
+  section {
+    padding: 72px;
+  }
+  p {
+    text-align: left;
+    max-width: 70ch;
+    line-height: 1.5;
+    margin: auto;
   }
 </style>

@@ -1,21 +1,29 @@
 ---
 import HamburgerMenuButton from './HamburgerMenuButton.astro'
 import DropdownMenu from './DropdownMenu.astro'
-const logo = '</>'
+const logo = '<LJ />'
 ---
 
 <header class="header">
   <div class="header-content">
-    <a href="/">{logo}</a>
+    <a href="/"><span>{logo}</span></a>
     <HamburgerMenuButton />
   </div>
   <DropdownMenu />
 </header>
 
 <style>
+  span {
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
   a {
     color: rgb(11, 194, 139);
     text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: rgb(11, 194, 139);
   }
   header {
     position: fixed;

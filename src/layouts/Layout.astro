@@ -1,4 +1,5 @@
 ---
+import Footer from '../components/Footer.astro'
 import Header from '../components/Header.astro'
 
 export interface Props {
@@ -20,10 +21,13 @@ const { title } = Astro.props
   <body>
     <Header />
     <slot />
+    <Footer />
     <style is:global>
+      @import '../styles/gobal-variables.css';
       html {
         font-family: system-ui, sans-serif;
-        background-color: #f6f6f6;
+        font-size: var(--main-font-size);
+        background-color: var(--background-color);
       }
       code {
         font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
@@ -33,6 +37,10 @@ const { title } = Astro.props
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+      }
+      body {
+        color: var(--text-color);
+        min-height: 100vh;
       }
     </style>
   </body>

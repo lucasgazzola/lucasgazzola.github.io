@@ -1,34 +1,64 @@
-<main>
-  <header class="main-title-container">
+<section>
+  <header class="title-container">
     <h1 class="name-container">Lucas Gazzola</h1>
     <h2 class="job-title-container">Fullstack Developer</h2>
   </header>
-</main>
+  <main>
+    <button class="button-download">Download CV</button>
+  </main>
+</section>
 
 <style>
-  main {
-    width: 100vw;
+  .button-download {
+    width: 140px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 800;
+    outline: none;
+    border: none;
+    background-color: #0bc28bc9;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  @media (hover: hover) {
+    .button-download:hover {
+      background-color: #0bc28b;
+    }
+  }
+  .button-download:active {
+    background-color: #0bc2b9;
+    transform: scale(0.99);
+  }
+
+  section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    justify-content: center;
     margin-top: 100px;
     /* 100 viewport heigth minus header's height(100px)  */
     height: calc(100vh - 100px);
     /* height: 100vh; */
-    background-color: #111;
   }
-  .main-title-container {
+  main {
+    display: flex;
+    justify-content: center;
+  }
+  .title-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 100%;
-    text-align: center;
   }
   .name-container {
-    font-size: 36px;
-    color: rgb(11, 194, 139);
+    font-size: var(--h1-size);
+    color: var(--primary-color);
   }
-  .main-title-container {
-    font-size: 16px;
-    color: rgb(157, 192, 182);
+  .job-title-container {
+    font-size: var(--h3-size);
+    color: var(--secondary-color);
   }
 </style>
