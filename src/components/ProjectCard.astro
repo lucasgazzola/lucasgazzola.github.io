@@ -9,8 +9,12 @@ const { id, title, description, techs, img, url, github } = Astro.props
       <main><p>{description}</p></main>
       <div class="image-container">IMAGEN</div>
       <footer>
-        <a href="" class="project-link">View Live Site</a>
-        <a href="" class="project-link">View GitHub Repo</a>
+        <a title="Go to the site's URL" href="" class="project-link"
+          >View Live Site</a
+        >
+        <a title="Go to the site's code on GitHub" href="" class="project-link"
+          >View GitHub Repo</a
+        >
       </footer>
     </article>
   </div>
@@ -19,8 +23,11 @@ const { id, title, description, techs, img, url, github } = Astro.props
 <style>
   footer {
     display: flex;
+    flex-direction: column;
+
     gap: 12px;
   }
+
   .project-link {
     display: inline-flex;
     justify-content: center;
@@ -57,8 +64,10 @@ const { id, title, description, techs, img, url, github } = Astro.props
     width: 100%;
   }
   p {
-    max-width: 80ch;
-    text-align: left;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    padding: 0 10px;
 
     line-height: 1.5;
   }
@@ -74,6 +83,8 @@ const { id, title, description, techs, img, url, github } = Astro.props
     display: flex;
     align-items: center;
     justify-content: center;
+
+    z-index: -1;
   }
   li {
     display: flex;
@@ -92,5 +103,14 @@ const { id, title, description, techs, img, url, github } = Astro.props
   }
   h3 {
     color: #d819bfab;
+  }
+  @media (min-width: 430px) {
+    footer {
+      flex-direction: row;
+    }
+    p {
+      text-align: justify;
+      max-width: 80ch;
+    }
   }
 </style>
