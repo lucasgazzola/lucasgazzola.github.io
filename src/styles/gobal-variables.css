@@ -1,12 +1,22 @@
 :root {
-  --primary-color: rgb(11, 194, 139);
-  --secondary-color: rgb(157, 192, 182);
+  --primary-color: rgb(11, 182, 194);
+  --secondary-color: rgb(201, 20, 207);
+  --third-color: rgb(20, 207, 45);
+
+  --primary-color-button: rgb(11 182 194 / 60%);
+  --secondary-color-button: rgb(164 20 207 / 60%);
+  --third-color-button: rgb(20 207 45 / 60%);
+
+  --button-hover-color: rgb(9, 129, 129);
+  --button-active-color: rgb(5, 59, 83);
 
   --background-color: #111;
   --text-color: #ddd;
 
   --nav-bar-height: 72px;
   --nav-bar-color: #050505;
+
+  --footer-background-color: rgb(11 182 194 / 20%);
 
   --h1-size: 36px;
   --h2-size: 30px;
