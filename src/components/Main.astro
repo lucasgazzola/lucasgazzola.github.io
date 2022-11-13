@@ -1,92 +1,29 @@
 ---
-type ColorsObjectType = {
-  [key: string]: string
-}
-// --background-color
-const COLORS: ColorsObjectType = {
-  black: '#111',
-  red: '#220606',
-  blue: '#010114',
-  pink: '#150118',
-  green: '#011e01',
-}
-const arrayOfColors = Array.from(Object.entries(COLORS))
+import ColorPicker from './ColorPicker.astro'
 ---
 
 <section id="home">
-  <header class="title-container">
-    <h1 class="name-container">Lucas Gazzola</h1>
-    <h2 class="job-title-container">Fullstack Developer</h2>
-    <div class="color-picker__container">
-      {
-        arrayOfColors.map(([color, colorCode]) => (
-          <button
-            title={color.charAt(0).toUpperCase() + color.slice(1)}
-            class="color-picker"
-            data-color-code={colorCode}
-            data-color={color}
-          />
-        ))
-      }
+  <header>
+    <div class="title-container">
+      <h1>Hi, there!👋️</h1>
+      <h1>I'm <span class="name-container">Lucas Gazzola</span></h1>
+      <!-- <h2 class="job-title-container">fullStack Developer</h2> -->
     </div>
   </header>
   <main>
-    <button title="Download Curriculum Vitae" class="button-download"
-      >Download CV</button
+    <button
+      type="button"
+      title="Download Curriculum Vitae"
+      class="button-download">Download CV</button
     >
   </main>
+  <ColorPicker />
 </section>
 
-<script>
-  const colorHandler = (pickColorElement: HTMLDivElement) => {
-    const { color = 'white', colorCode = '#fff' } = pickColorElement.dataset
-
-    pickColorElement.style.backgroundColor = color
-
-    const handleColorClick = () => {
-      const root = document.querySelector(':root') as HTMLHtmlElement
-      root?.style?.setProperty('--background-color', colorCode)
-    }
-
-    pickColorElement.addEventListener('click', handleColorClick)
-  }
-
-  const colorsDivList = Array.from(
-    document.getElementsByClassName('color-picker')
-  ) as Array<HTMLDivElement>
-
-  colorsDivList.forEach(colorHandler)
-</script>
-
 <style>
-  .color-picker__container {
-    display: flex;
-    height: 40px;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-  }
-  .color-picker {
-    outline: none;
-    border: none;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.1s ease-in;
-  }
-  .color-picker:active {
-    transform: translateY(1px) scale(0.9);
-    box-shadow: 1px 1px 4px #5558 inset;
-  }
-  @media (hover: hover) {
-    .color-picker:hover {
-      width: 25px;
-      height: 25px;
-    }
-  }
   #home {
-    gap: 38px;
+    gap: 5rem;
+    position: relative;
   }
   .button-download {
     width: 140px;
@@ -95,18 +32,18 @@ const arrayOfColors = Array.from(Object.entries(COLORS))
     font-weight: 800;
     outline: none;
     border: none;
-    background-color: #075f45;
+    background-color: var(--secondary-color-button);
     color: #fff;
     border-radius: 6px;
     cursor: pointer;
   }
   @media (hover: hover) {
     .button-download:hover {
-      background-color: #0bc28bb0;
+      background-color: rgb(9, 129, 129);
     }
   }
   .button-download:active {
-    background-color: #0bc28b3f;
+    background-color: var(--button-active-color);
     transform: scale(0.99);
   }
 
@@ -126,20 +63,60 @@ const arrayOfColors = Array.from(Object.entries(COLORS))
   .title-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     width: 100%;
   }
-  h1,
-  h2 {
-    text-align: center;
-  }
   .name-container {
+    position: relative;
     font-size: var(--h1-size);
     color: var(--primary-color);
+    transition: color 0.2s ease 0.2s;
   }
-  .job-title-container {
-    font-size: var(--h3-size);
-    color: var(--secondary-color);
+  @media (hover: hover) {
+    .name-container:hover {
+      animation: rainbow 3s normal infinite;
+    }
+  }
+  @keyframes rainbow {
+    0% {
+      color: var(--primary-color);
+    }
+    33% {
+      color: var(--secondary-color);
+    }
+    66% {
+      color: var(--third-color);
+    }
+    99% {
+      color: var(--primary-color);
+    }
+  }
+  /* @media (hover: hover) {
+    .name-container::after {
+      content: 'fullStack Developer';
+      /* display: none;
+      position: absolute;
+      top: 36px;
+      left: 0;
+      height: auto;
+      width: max-content;
+      text-align: end;
+      font-size: 1.4rem;
+      color: transparent;
+      transition: all 0.5s ease-in 0.5s;
+    }
+    .name-container:hover::after {
+      color: rgb(11, 60, 194);
+      top: 48px;
+    }
+  } */
+  @media (max-width: 360px) {
+    .title-container {
+      align-items: center;
+    }
+    h1 {
+      text-align: center;
+    }
   }
 </style>
