@@ -32,25 +32,32 @@ const { id, title, description, techs, img, url, github } = Astro.props
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    max-width: 160px;
-    width: 160px;
+    max-width: 180px;
+    width: 180px;
     height: 40px;
     border-radius: 6px;
     font-size: 1rem;
     font-weight: 700;
-    background-color: #09f;
+    background-color: var(--secondary-color-button);
+    color: #fff;
     text-decoration: none;
+    transition: background-color 0.05s ease-in;
+  }
+  @media (hover: hover) {
+    .project-link:hover {
+      background-color: var(--button-hover-color);
+    }
   }
   .project-link:active {
     transform: scale(0.99);
-    background-color: #09f8;
+    background-color: var(--button-active-color);
   }
   a {
     color: #ddd;
   }
-  a:hover {
+  /* a:hover {
     text-decoration: underline;
-  }
+  } */
   article {
     display: flex;
     gap: 2rem;
@@ -102,7 +109,7 @@ const { id, title, description, techs, img, url, github } = Astro.props
     justify-content: space-evenly;
   }
   h3 {
-    color: #d819bfab;
+    color: var(--secondary-color);
   }
   @media (min-width: 430px) {
     footer {
