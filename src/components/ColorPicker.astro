@@ -1,0 +1,78 @@
+---
+type ColorsObjectType = {
+  [key: string]: string
+}
+// --background-color
+const COLORS: ColorsObjectType = {
+  black: '#111',
+  blue: '#010114',
+  purple: '#150118',
+  // green: '#001600',
+}
+const arrayOfColors = Array.from(Object.entries(COLORS))
+---
+
+<div class="color-picker__container">
+  {
+    arrayOfColors.map(([color, colorCode]) => (
+      <button
+        title={color.charAt(0).toUpperCase() + color.slice(1)}
+        class="color-picker"
+        data-color-code={colorCode}
+        data-color={color}
+      />
+    ))
+  }
+</div>
+
+<style>
+  .color-picker__container {
+    position: absolute;
+    top: var(--nav-bar-height);
+    padding: 0 8px;
+    border-bottom-right-radius: 10px;
+    background-color: #fff2;
+    left: 0;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    z-index: 1;
+  }
+  .color-picker {
+    outline: none;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+  }
+  .color-picker:active {
+    transform: translateY(1px) scale(0.9);
+    box-shadow: 1px 1px 4px #5558 inset;
+  }
+  @media (hover: hover) {
+    .color-picker:hover {
+      width: 23px;
+      height: 23px;
+    }
+  }
+</style>
+
+<script>
+  const colorHandler = (pickColorElement: HTMLDivElement) => {
+    const { color = 'white', colorCode = '#fff' } = pickColorElement.dataset
+    pickColorElement.style.backgroundColor = color
+    const handleColorClick = () => {
+      const root = document.querySelector(':root') as HTMLHtmlElement
+      root?.style?.setProperty('--background-color', colorCode)
+    }
+    pickColorElement.addEventListener('click', handleColorClick)
+  }
+  const colorsDivList = Array.from(
+    document.getElementsByClassName('color-picker')
+  ) as Array<HTMLDivElement>
+  colorsDivList.forEach(colorHandler)
+</script>
