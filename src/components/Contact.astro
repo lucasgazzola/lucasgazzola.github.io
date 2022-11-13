@@ -83,7 +83,10 @@ import FormGroup from './FormGroup.astro'
   #contact-form {
     width: 100%;
     max-width: 340px;
-    padding: 0 50px;
+    padding: 40px 40px;
+
+    border: 1px solid #065055aa;
+    border-radius: 12px;
 
     display: flex;
     flex-direction: column;
@@ -97,23 +100,25 @@ import FormGroup from './FormGroup.astro'
     font-weight: 800;
     outline: none;
     border: none;
-    background-color: #075f45;
+    background-color: var(--primary-color-button);
+    /* opacity: 75%; */
     color: #fff;
     border-radius: 6px;
     cursor: pointer;
   }
   @media (hover: hover) {
     #button-submit:hover {
-      background-color: #0bc28bb0;
+      background-color: var(--button-hover-color);
     }
   }
   #button-submit:active {
-    background-color: #0bc28b3f;
+    background-color: var(--button-active-color);
     transform: scale(0.99);
   }
   @media (max-width: 320px) {
     #contact-form {
-      padding: 0 20px;
+      padding: 0px 20px;
+      border: none;
     }
   }
 </style>
