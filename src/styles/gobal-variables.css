@@ -1,6 +1,7 @@
 :root {
-  --primary-color: rgb(11, 182, 194);
-  --secondary-color: rgb(201, 20, 207);
+  /* --primary-color: rgb(11, 182, 194); */
+  --primary-color: #487ce4;
+  --secondary-color: rgb(255, 67, 255);
   --third-color: rgb(20, 207, 45);
 
   --primary-color-button: rgb(11 182 194 / 60%);

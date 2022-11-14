@@ -5,7 +5,7 @@ import ColorPicker from './ColorPicker.astro'
 <section id="home">
   <header>
     <div class="title-container">
-      <h1>Hi, there!👋️</h1>
+      <h1>Hi, there!<span class="hi-emoji">👋️</span></h1>
       <h1>I'm <span class="name-container">Lucas Gazzola</span></h1>
       <!-- <h2 class="job-title-container">fullStack Developer</h2> -->
     </div>
@@ -21,6 +21,23 @@ import ColorPicker from './ColorPicker.astro'
 </section>
 
 <style>
+  .hi-emoji {
+    display: inline-block;
+    animation: wave-hand 0.5s linear alternate-reverse;
+    animation-iteration-count: 5;
+  }
+  @keyframes wave-hand {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(20deg);
+    }
+  }
+
   #home {
     gap: 5rem;
     position: relative;
@@ -71,11 +88,10 @@ import ColorPicker from './ColorPicker.astro'
     position: relative;
     font-size: var(--h1-size);
     color: var(--primary-color);
-    transition: color 0.2s ease 0.2s;
   }
   @media (hover: hover) {
     .name-container:hover {
-      animation: rainbow 3s normal infinite;
+      animation: rainbow 3s normal 1s infinite;
     }
   }
   @keyframes rainbow {

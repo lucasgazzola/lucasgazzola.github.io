@@ -22,35 +22,58 @@ const { id, title, description, techs, img, url, github } = Astro.props
 
 <style>
   footer {
+    width: 100%;
     display: flex;
+
     flex-direction: column;
-
-    gap: 12px;
-  }
-
-  .project-link {
-    display: inline-flex;
     justify-content: center;
-    align-items: center;
-    max-width: 180px;
-    width: 180px;
-    height: 40px;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: 700;
-    background-color: var(--secondary-color-button);
-    color: #fff;
-    text-decoration: none;
-    transition: background-color 0.05s ease-in;
+
+    gap: 18px;
   }
+  .project-link {
+    position: relative;
+    text-align: center;
+    /* display: inline-flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* max-width: 180px; */
+    padding: 4px 14px;
+    /* height: 40px; */
+    /* border-radius: 6px; */
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 700;
+    /* color: rgb(255, 43, 160); */
+    color: rgba(255, 128, 255, 0.726);
+  }
+
   @media (hover: hover) {
     .project-link:hover {
-      background-color: var(--button-hover-color);
+      text-decoration: underline;
+      color: var(--secondary-color);
+      /* background-image: linear-gradient(to right, #fff, #fff); */
+    }
+    .project-link::after {
+      position: absolute;
+      content: '🚀️';
+      width: max-content;
+      /* display: none; */
+      opacity: 0;
+      /* color: #fff; */
+      /* color: #111; */
+      transition: opacity 0.2s ease-in;
+    }
+    .project-link:hover::after {
+      /* display: inline-block; */
+      opacity: 1;
+      /* background-color: #fff1; */
+      /* right: -15px;
+      animation-iteration-count: 1; */
     }
   }
   .project-link:active {
     transform: scale(0.99);
-    background-color: var(--button-active-color);
+    color: var(--secondary-color-button);
   }
   a {
     color: #ddd;
@@ -111,7 +134,7 @@ const { id, title, description, techs, img, url, github } = Astro.props
   h3 {
     color: var(--secondary-color);
   }
-  @media (min-width: 430px) {
+  @media (min-width: 480px) {
     footer {
       flex-direction: row;
     }
