@@ -4,12 +4,12 @@
   --secondary-color: rgb(255, 67, 255);
   --third-color: rgb(20, 207, 45);
 
-  --primary-color-button: rgb(11 182 194 / 60%);
+  --primary-color-button: #204285;
   --secondary-color-button: rgb(164 20 207 / 60%);
   --third-color-button: rgb(20 207 45 / 60%);
 
-  --button-hover-color: rgb(9, 129, 129);
-  --button-active-color: rgb(5, 59, 83);
+  --button-hover-color: #30577c;
+  --button-active-color: #101d36;
 
   --background-color: #111;
   --text-color: #ddd;
@@ -17,7 +17,9 @@
   --nav-bar-height: 72px;
   --nav-bar-color: #050505;
 
-  --footer-background-color: rgb(11 182 194 / 20%);
+  --project-background-color: #487ce410;
+
+  --footer-background-color: #487ce471;
 
   --h1-size: 36px;
   --h2-size: 30px;
