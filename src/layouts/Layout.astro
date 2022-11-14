@@ -22,8 +22,15 @@ const { title } = Astro.props
     <Header />
     <slot />
     <Footer />
+    <div id="tsparticles"></div>
+    <script>
+      import '../tsparticles/tsparticles.ts'
+    </script>
     <style is:global>
       @import '../styles/gobal-variables.css';
+      #tsparticles {
+        position: absolute;
+      }
       html {
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         font-family: sans-serif;
@@ -35,6 +42,7 @@ const { title } = Astro.props
         /* Transition when the background-color changes */
         transition: background-color 0.2s ease-in;
       }
+
       code {
         font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
           DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
@@ -67,5 +75,6 @@ const { title } = Astro.props
         flex-direction: column;
       }
     </style>
+    <script></script>
   </body>
 </html>
