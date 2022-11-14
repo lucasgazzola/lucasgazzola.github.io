@@ -14,12 +14,12 @@
 
 <script>
   const menuItemsList = document.querySelectorAll('.menu-item')
-
   const closeMenu = () => {
+    const menuButton = document.getElementById('open-menu-button')
+    menuButton?.classList.remove('active')
     const menu = document.getElementById('menu')
     !menu?.classList.contains('hidden') && menu?.classList.add('hidden')
   }
-
   menuItemsList.forEach(menuItem => {
     menuItem?.addEventListener('click', closeMenu)
   })
