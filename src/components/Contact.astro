@@ -5,7 +5,7 @@ import FormGroup from './FormGroup.astro'
 <section id="contact">
   <header><h3 class="section-title">Contact</h3></header>
   <main>
-    <form id="contact-form">
+    <form id="contact-form" class="scroll-reveal opacity-reveal">
       <FormGroup>
         <label for="name">Name</label>
         <input
@@ -47,6 +47,12 @@ import FormGroup from './FormGroup.astro'
 </section>
 
 <style>
+  .opacity-reveal {
+    opacity: 0;
+  }
+  .active {
+    opacity: 1;
+  }
   label {
     color: #eee;
     font-size: 18px;
@@ -92,6 +98,8 @@ import FormGroup from './FormGroup.astro'
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    transition: opacity 0.5s ease-in;
   }
   #button-submit {
     justify-self: center;
@@ -135,7 +143,7 @@ import FormGroup from './FormGroup.astro'
     const message = document.getElementById('message') as HTMLTextAreaElement
 
     // TODO: Handle email delivery
-    alert('Message sent')
+    alert("Message can't be sent, but soon it'll be possible")
 
     // Clean the inputs
     if (name) name.value = ''

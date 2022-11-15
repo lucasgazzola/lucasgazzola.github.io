@@ -3,9 +3,22 @@ const { title } = Astro.props
 ---
 
 <!-- TODO: Create the stack card -->
-<li><div><header><h4>{title}</h4></header></div></li>
+<li>
+  <div class="techcard scroll-reveal rotate">
+    <header><h4>{title}</h4></header>
+  </div>
+</li>
 
 <style>
+  .techcard {
+    transition: transform 0.3s ease-in;
+  }
+  .rotate {
+    transform: rotate(180deg) scale(0);
+  }
+  .active {
+    transform: rotate(0deg) scale(1);
+  }
   h4 {
     font-size: 12px;
     font-weight: 900;
