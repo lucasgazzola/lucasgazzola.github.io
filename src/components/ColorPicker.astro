@@ -27,11 +27,11 @@ const arrayOfColors = Array.from(Object.entries(COLORS))
 
 <style>
   .color-picker__container {
-    position: absolute;
+    position: fixed;
     top: var(--nav-bar-height);
     padding: 0 8px;
     border-bottom-right-radius: 10px;
-    background-color: #fff2;
+    background-color: #6665;
     left: 0;
     display: flex;
     height: 40px;
@@ -59,6 +59,13 @@ const arrayOfColors = Array.from(Object.entries(COLORS))
       height: 23px;
     }
   }
+  @media (min-width: 1440px) {
+    .color-picker__container {
+      left: 50%;
+      transform: translateX(-50%);
+      border-bottom-left-radius: 10px;
+    }
+  }
 </style>
 
 <script>
@@ -71,8 +78,8 @@ const arrayOfColors = Array.from(Object.entries(COLORS))
     }
     pickColorElement.addEventListener('click', handleColorClick)
   }
-  const colorsDivList = Array.from(
-    document.getElementsByClassName('color-picker')
-  ) as Array<HTMLDivElement>
+  const colorsDivList = document.querySelectorAll(
+    '.color-picker'
+  ) as NodeListOf<HTMLDivElement>
   colorsDivList.forEach(colorHandler)
 </script>
