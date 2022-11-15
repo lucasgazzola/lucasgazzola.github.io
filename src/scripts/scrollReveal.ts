@@ -26,7 +26,6 @@ function addObserver({ element, options }: addObserverParams) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active')
-        console.log(entry.target)
         observer.unobserve(entry.target)
       }
     })
