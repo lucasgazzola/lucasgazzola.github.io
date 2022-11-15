@@ -1,0 +1,6 @@
+<?xml version="1.0" standalone="no"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="230" height="72"><style>
+@import url("https://fonts.googleapis.com/css?family=Bungee+Inline|Podkova");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css");
+</style>
+<defs/><g xmlns="http://www.w3.org/2000/svg"><path fill="#487ce499" stroke="#000111" paint-order="fill stroke markers" d=" M 126.34413146972656 7 L 218.39231872558594 7 Q 223.39231872558594 7 223.39231872558594 12 L 223.39231872558594 60 Q 223.39231872558594 65 218.39231872558594 65 L 126.34413146972656 65 Q 121.34413146972656 65 121.34413146972656 60 L 121.34413146972656 12 Q 121.34413146972656 7 126.34413146972656 7 Z" stroke-miterlimit="10" stroke-dasharray=""/><text fill="#eeeeee" stroke="none" font-family="Bungee Inline" font-size="48px" font-style="normal" font-weight="bold" text-decoration="normal" x="51" y="36" text-anchor="start" dominant-baseline="central">LG</text><text fill="#dddddd" stroke="none" font-family="Podkova" font-size="48px" font-style="normal" font-weight="normal" text-decoration="normal" x="127.34413146972656" y="36" text-anchor="start" dominant-baseline="central">DEV</text></g></svg>
