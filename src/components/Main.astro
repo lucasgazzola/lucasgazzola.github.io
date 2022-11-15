@@ -3,6 +3,7 @@ import ColorPicker from './ColorPicker.astro'
 ---
 
 <section id="home">
+  <ColorPicker />
   <header>
     <div class="title-container">
       <h1>Hi, there!<span class="hi-emoji">👋️</span></h1>
@@ -11,59 +12,21 @@ import ColorPicker from './ColorPicker.astro'
     </div>
   </header>
   <main>
-    <button
-      type="button"
+    <a
+      href="/CV/CV-en.pdf"
+      download="Lucas Gazzola - FullStack CV"
       title="Download Curriculum Vitae"
-      class="button-download">Download CV</button
+      class="download-link">Download CV</a
+    >
+    <a
+      href="/curriculum"
+      title="Online Curriculum Vitae version"
+      class="download-link">Online CV</a
     >
   </main>
-  <ColorPicker />
 </section>
 
 <style>
-  .hi-emoji {
-    display: inline-block;
-    animation: wave-hand 0.5s linear alternate-reverse;
-    animation-iteration-count: 5;
-  }
-  @keyframes wave-hand {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(10deg);
-    }
-    100% {
-      transform: rotate(20deg);
-    }
-  }
-
-  #home {
-    gap: 5rem;
-    position: relative;
-  }
-  .button-download {
-    width: 140px;
-    height: 40px;
-    font-size: 18px;
-    font-weight: 800;
-    outline: none;
-    border: none;
-    background-color: var(--secondary-color-button);
-    color: #fff;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  @media (hover: hover) {
-    .button-download:hover {
-      background-color: rgb(9, 129, 129);
-    }
-  }
-  .button-download:active {
-    background-color: var(--button-active-color);
-    transform: scale(0.99);
-  }
-
   section {
     width: 100%;
     align-items: center;
@@ -73,10 +36,39 @@ import ColorPicker from './ColorPicker.astro'
     height: 100vh;
     /* height: 100vh; */
   }
+  section#home {
+    gap: 5rem;
+    position: relative;
+  }
   main {
     display: flex;
     justify-content: center;
   }
+  .hi-emoji {
+    display: inline-block;
+    animation: wave-hand 0.5s linear alternate-reverse;
+    animation-iteration-count: 5;
+  }
+
+  .download-link {
+    display: flex;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.7rem;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--secondary-color);
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  .download-link:active {
+    background-color: var(--button-active-color);
+    transform: scale(0.99);
+  }
+
   .title-container {
     display: flex;
     justify-content: center;
@@ -89,25 +81,7 @@ import ColorPicker from './ColorPicker.astro'
     font-size: var(--h1-size);
     color: var(--primary-color);
   }
-  @media (hover: hover) {
-    .name-container:hover {
-      animation: rainbow 3s normal 1s infinite;
-    }
-  }
-  @keyframes rainbow {
-    0% {
-      color: var(--primary-color);
-    }
-    33% {
-      color: var(--secondary-color);
-    }
-    66% {
-      color: var(--third-color);
-    }
-    99% {
-      color: var(--primary-color);
-    }
-  }
+
   /* @media (hover: hover) {
     .name-container::after {
       content: 'fullStack Developer';
@@ -133,6 +107,48 @@ import ColorPicker from './ColorPicker.astro'
     }
     h1 {
       text-align: center;
+    }
+    main {
+      flex-direction: column;
+    }
+  }
+  @media (hover: hover) {
+    .download-link:hover {
+      color: #fff;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .name-container:hover {
+      cursor: crosshair;
+      animation: rainbow 2s normal 1s infinite;
+    }
+  }
+  @keyframes rainbow {
+    0% {
+      color: var(--primary-color);
+    }
+    33% {
+      color: var(--secondary-color);
+    }
+    66% {
+      color: var(--third-color);
+    }
+    99% {
+      color: var(--primary-color);
+    }
+  }
+  @keyframes wave-hand {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(20deg);
     }
   }
 </style>
