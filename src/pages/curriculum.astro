@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Lucas Gazzola - CV">
+  <main>
+    <iframe
+      title="Lucas Gazzola's Curriculum Vitae"
+      id="cv-en-iframe"
+      src="/CV/CV-en.pdf"></iframe>
+  </main>
+</Layout>
+<style>
+  #cv-en-iframe {
+    width: max-content;
+    height: 600px;
+    /* min-height: 100vh; */
+    border: none;
+    background-color: #3333;
+  }
+  main {
+    margin-top: var(--nav-bar-height);
+  }
+</style>
