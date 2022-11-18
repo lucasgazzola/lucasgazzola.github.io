@@ -2,7 +2,7 @@
 import HamburgerMenuButton from './HamburgerMenuButton.astro'
 import DropdownMenu from './DropdownMenu.astro'
 import LinksList from './LinksList.astro'
-import logo from '../assets/logo-modified.svg'
+// import logo from '../assets/logo-modified.svg'
 // const logo = '<LJ />'
 ---
 
@@ -10,7 +10,11 @@ import logo from '../assets/logo-modified.svg'
   <div class="header-content">
     <a class="menu-item" href="/#"
       ><span
-        ><img class="logo-image" src={logo} alt="Lucas Gazzola's logo" />
+        ><img
+          class="logo-image"
+          src="/logo-modified.svg"
+          alt="Lucas Gazzola's logo"
+        />
       </span>
     </a>
     <HamburgerMenuButton />

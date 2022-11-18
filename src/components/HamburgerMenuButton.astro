@@ -22,13 +22,15 @@ import MenuIconLogo from './MenuIconLogo.astro'
 <style>
   #open-menu-button {
     background-color: transparent;
-    color: #ddd;
+    color: #eee;
     outline: none;
     border: none;
+    transition: transform 0.2s ease-in;
   }
 
   #open-menu-button.active {
     color: var(--primary-color);
+    transform: rotateZ(180deg);
   }
   /* Add hover if that's possible */
   @media (hover: hover) {
