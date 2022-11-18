@@ -6,7 +6,7 @@ import FormGroup from './FormGroup.astro'
   <header><h3 class="section-title">Contact</h3></header>
   <main>
     <form id="contact-form" class="scroll-reveal opacity-reveal">
-      <FormGroup>
+      <!-- <FormGroup>
         <label for="name">Name</label>
         <input
           value=""
@@ -16,16 +16,16 @@ import FormGroup from './FormGroup.astro'
           name="name"
           id="name"
         />
-      </FormGroup>
+      </FormGroup> -->
       <FormGroup>
-        <label for="email">Email</label>
+        <label for="subject">Subject</label>
         <input
           value=""
           autocomplete="off"
-          placeholder="Enter your email..."
-          type="email"
-          name="email"
-          id="email"
+          placeholder="Enter the subject of the email..."
+          type="text"
+          name="subject"
+          id="subject"
         />
       </FormGroup>
       <FormGroup>
@@ -138,17 +138,26 @@ import FormGroup from './FormGroup.astro'
   const handleSubmitForm = (event: Event) => {
     event.preventDefault()
 
-    const name = document.getElementById('name') as HTMLInputElement
-    const email = document.getElementById('email') as HTMLInputElement
-    const message = document.getElementById('message') as HTMLTextAreaElement
+    // const nameInput = document.getElementById('name') as HTMLInputElement
+    const subjectInput = document.getElementById('subject') as HTMLInputElement
+    const messageTextarea = document.getElementById(
+      'message'
+    ) as HTMLTextAreaElement
 
-    // TODO: Handle email delivery
-    alert("Message can't be sent, but soon it'll be possible")
+    const { value: subject } = subjectInput
+    // const { value: name } = nameInput
+    const { value: message } = messageTextarea
 
+    // TODO: Handle empty field
+    if (subject === '' || message === '') return
+
+    window.open(
+      `mailto:lucasgazzola1@outlook.com?subject=${subject}&body=${message}`
+    )
     // Clean the inputs
-    if (name) name.value = ''
-    if (email) email.value = ''
-    if (message) message.value = ''
+    // nameInput.value = ''
+    subjectInput.value = ''
+    messageTextarea.value = ''
   }
   submitButton?.addEventListener('click', handleSubmitForm)
 </script>
