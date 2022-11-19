@@ -29,24 +29,27 @@ const { id, title, description, techs, img, url, github } = Astro.props
     max-width: 80ch;
   }
   .project-card {
+    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
     padding: 2rem 0;
     /* border: 2px solid var(--primary-color-button); */
-    border-radius: 1rem;
+    border-radius: 4px;
     background-color: var(--project-background-color);
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    box-shadow: 0px 0px 1000px #487ce430 inset;
+    /* box-shadow: 0px 0px 1000px #487ce430 inset; */
     transition: border-right-color 0.5s ease-in, border-left-color 0.5s ease-in,
-      border-top-width 0.5s ease-in, border-bottom-width 0.5s ease-in,
-      transform 0.2s ease-in;
+      border-top-width 0.5s ease-in, border-bottom-width 0.5s ease-in;
+
+    z-index: 50;
   }
 
   .active {
     transform: scale(1);
+    transition: transform 0.1s ease-in;
   }
   footer {
     width: 100%;
@@ -58,6 +61,7 @@ const { id, title, description, techs, img, url, github } = Astro.props
     gap: 18px;
   }
   .project-title {
+    color: #f2aa4cff;
     font-size: 26px;
     text-align: center;
   }
@@ -75,7 +79,7 @@ const { id, title, description, techs, img, url, github } = Astro.props
     text-decoration: none;
     font-weight: 700;
     /* color: rgb(255, 43, 160); */
-    color: rgba(255, 128, 255, 0.726);
+    color: #fee715;
   }
 
   @media (hover: hover) {

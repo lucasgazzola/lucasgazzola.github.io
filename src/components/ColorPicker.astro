@@ -4,10 +4,9 @@ type ColorsObjectType = {
 }
 // --background-color
 const COLORS: ColorsObjectType = {
-  black: '#111',
-  blue: '#010114',
-  purple: '#150118',
-  // green: '#001600',
+  black: '#050505',
+  darkblue: '#000015',
+  orange: '#190B07',
 }
 const arrayOfColors = Array.from(Object.entries(COLORS))
 ---
@@ -38,7 +37,7 @@ const arrayOfColors = Array.from(Object.entries(COLORS))
     align-items: center;
     justify-content: center;
     gap: 8px;
-    z-index: 1;
+    z-index: 1000;
   }
   .color-picker {
     outline: none;

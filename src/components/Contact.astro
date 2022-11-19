@@ -19,8 +19,8 @@ const socialNetworks = [
   },
   {
     network: 'WhatsApp',
-    info: '+54 9 364 744-6259',
-    href: 'https://wa.me/5493647446259',
+    info: '+54 364 744-6259',
+    href: 'https://wa.me/543647446259',
   },
 ]
 ---
@@ -46,7 +46,7 @@ const socialNetworks = [
           <input
             value=""
             autocomplete="off"
-            placeholder="Enter the subject of the email..."
+            placeholder="Enter the subject..."
             type="text"
             name="subject"
             id="subject"
@@ -68,6 +68,7 @@ const socialNetworks = [
         </FormGroup>
       </form>
       <div class="contact-data">
+        <h4 class="contact-data-title">My networks</h4>
         <ul class="social-networks-list">
           {
             socialNetworks.map(({ network, info, href }) => (
@@ -103,7 +104,7 @@ const socialNetworks = [
     padding: 8px 8px;
     border: none;
     outline: none;
-    border-radius: 4px;
+    border-radius: 2px;
     transition: background-color 0.2s;
     caret-color: #075f45;
   }
@@ -123,30 +124,40 @@ const socialNetworks = [
     justify-content: center;
   }
   .contact-form {
-    /* height: 100%; */
-    padding: 40px 40px;
-    width: 280px;
-    /* TODO: style the inputs not to grow --> max-width */
-    min-width: 280px;
-    max-width: 800px;
+    max-width: 300px;
+    min-width: 270px;
     display: flex;
     flex-direction: column;
     gap: 24px;
   }
   .main-content {
+    position: relative;
+    padding: 40px 20px;
+    height: max-content;
     display: inline-flex;
+    gap: 3rem;
     /* border: 1px solid #487ce488; */
-    border-radius: 6px;
+    border-radius: 4px;
     align-items: center;
     justify-content: center;
-    background-color: #2f1b55b0;
+    background-color: #0c1b33;
     /* opacity: 0; */
     width: 80ch;
     max-width: 80ch;
+    z-index: 500;
   }
   .contact-data {
+    min-width: 270px;
     display: flex;
-    padding: 40px 40px;
+    flex-direction: column;
+    align-self: flex-start;
+    text-align: center;
+    gap: 2rem;
+  }
+  .contact-data-title {
+    /* text-align: center; */
+    /* align-self: flex-start;
+    justify-self: flex-start; */
   }
   .social-networks-list {
     display: flex;
@@ -154,6 +165,7 @@ const socialNetworks = [
     flex-direction: column;
     gap: 1rem;
     justify-content: center;
+    /* align-items: stretch; */
   }
   #button-submit {
     justify-self: center;
@@ -181,6 +193,12 @@ const socialNetworks = [
   @media (max-width: 682px) {
     .main-content {
       flex-direction: column;
+      gap: 2rem;
+    }
+    .contact-data {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
     }
   }
   @media (max-width: 400px) {
@@ -188,15 +206,7 @@ const socialNetworks = [
       width: 100%;
       border: none;
       border-radius: 0;
-    }
-    .contact-form {
-      padding: 40px 20px;
-    }
-    .contact-data {
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 0px;
+      padding: 25px 5px;
     }
   }
 </style>

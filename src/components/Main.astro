@@ -61,13 +61,13 @@ import ColorPicker from './ColorPicker.astro'
     padding: 0.5rem 0.7rem;
     font-size: 18px;
     font-weight: 800;
-    color: var(--secondary-color);
+    color: #f2aa4c;
     border-radius: 2px;
     cursor: pointer;
   }
 
   .download-link:active {
-    background-color: var(--button-active-color);
+    color: var(--button-active-color);
     transform: scale(0.99);
   }
 
@@ -116,7 +116,7 @@ import ColorPicker from './ColorPicker.astro'
   }
   @media (hover: hover) {
     .download-link:hover {
-      color: #fff;
+      color: var(--secondary-color);
     }
 
     a:hover {

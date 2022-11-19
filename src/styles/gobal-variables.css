@@ -11,16 +11,19 @@
   --button-hover-color: #30577c;
   --button-active-color: #101d36;
 
-  --background-color: #111;
+  --background-color: #050505;
   --text-color: #eee;
 
   --nav-bar-height: 72px;
   /* --nav-bar-color: rgb(47, 4, 51); */
-  --nav-bar-color: #151515;
+  --nav-bar-color: #111;
 
-  --project-background-color: #487ce410;
+  /* --project-background-color: #140235; */
+  /* --project-background-color: #05311f; */
+  /* --project-background-color: #173e43; */
+  --project-background-color: #101820;
 
-  --footer-background-color: #487ce471;
+  --footer-background-color: #1d428b;
 
   --h1-size: 36px;
   --h2-size: 30px;
