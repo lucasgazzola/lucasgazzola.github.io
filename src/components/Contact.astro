@@ -1,48 +1,82 @@
 ---
 import FormGroup from './FormGroup.astro'
+import SocialNetwork from './SocialNetwork.astro'
+const socialNetworks = [
+  {
+    network: 'GitHub',
+    info: 'github.com/lucasgazzola',
+    href: 'https://github.com/lucasgazzola',
+  },
+  {
+    network: 'LinkedIn',
+    info: 'linkedin.com/in/lucasgazzola',
+    href: 'https://www.linkedin.com/in/lucasgazzola/',
+  },
+  {
+    network: 'Email',
+    info: 'lucasgazzola@outlook.com',
+    href: 'mailto:lucasgazzola1@outlook.com',
+  },
+  {
+    network: 'WhatsApp',
+    info: '+54 9 364 744-6259',
+    href: 'https://wa.me/5493647446259',
+  },
+]
 ---
 
-<section id="contact">
-  <header><h3 class="section-title">Contact</h3></header>
-  <main>
-    <form id="contact-form" class="scroll-reveal opacity-reveal">
-      <!-- <FormGroup>
-        <label for="name">Name</label>
-        <input
-          value=""
-          autocomplete="off"
-          placeholder="Enter your name..."
-          type="text"
-          name="name"
-          id="name"
-        />
-      </FormGroup> -->
-      <FormGroup>
-        <label for="subject">Subject</label>
-        <input
-          value=""
-          autocomplete="off"
-          placeholder="Enter the subject of the email..."
-          type="text"
-          name="subject"
-          id="subject"
-        />
-      </FormGroup>
-      <FormGroup>
-        <label for="message">Message</label>
-        <textarea
-          cols="5"
-          autocomplete="off"
-          placeholder="Enter your message..."
-          name="message"
-          id="message"></textarea>
-      </FormGroup>
-      <FormGroup>
-        <button id="button-submit" title="Send email" type="submit">
-          Send</button
-        >
-      </FormGroup>
-    </form>
+<section class="contact-section" id="contact">
+  <header class="contact-header"><h3 class="section-title">Contact</h3></header>
+  <main class="contact-main">
+    <div class="main-content scroll-reveal opacity-reveal">
+      <form id="contact-form" class="contact-form">
+        <!-- <FormGroup>
+          <label for="name">Name</label>
+          <input
+            value=""
+            autocomplete="off"
+            placeholder="Enter your name..."
+            type="text"
+            name="name"
+            id="name"
+          />
+        </FormGroup> -->
+        <FormGroup>
+          <label for="subject">Subject</label>
+          <input
+            value=""
+            autocomplete="off"
+            placeholder="Enter the subject of the email..."
+            type="text"
+            name="subject"
+            id="subject"
+          />
+        </FormGroup>
+        <FormGroup>
+          <label for="message">Message</label>
+          <textarea
+            cols="5"
+            autocomplete="off"
+            placeholder="Enter your message..."
+            name="message"
+            id="message"></textarea>
+        </FormGroup>
+        <FormGroup>
+          <button id="button-submit" title="Send email" type="submit">
+            Send</button
+          >
+        </FormGroup>
+      </form>
+      <div class="contact-data">
+        <ul class="social-networks-list">
+          {
+            socialNetworks.map(({ network, info, href }) => (
+              <SocialNetwork href={href} info={info} network={network} />
+            ))
+          }
+        </ul>
+      </div>
+    </div>
   </main>
 </section>
 
@@ -52,6 +86,7 @@ import FormGroup from './FormGroup.astro'
   }
   .active {
     opacity: 1;
+    transition: opacity 0.2s ease-in;
   }
   label {
     color: #eee;
@@ -81,25 +116,44 @@ import FormGroup from './FormGroup.astro'
   textarea:focus {
     background-color: #fff;
   }
-  main {
+
+  .contact-main {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
-  #contact-form {
-    width: 100%;
-    max-width: 340px;
+  .contact-form {
+    /* height: 100%; */
     padding: 40px 40px;
-
-    border: 1px solid var(--footer-background-color);
-    background-color: #487ce41e;
-    border-radius: 12px;
-
+    width: 280px;
+    /* TODO: style the inputs not to grow --> max-width */
+    min-width: 280px;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     gap: 24px;
-
-    transition: opacity 0.5s ease-in;
+  }
+  .main-content {
+    display: inline-flex;
+    /* border: 1px solid #487ce488; */
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    background-color: #2f1b55b0;
+    /* opacity: 0; */
+    width: 80ch;
+    max-width: 80ch;
+  }
+  .contact-data {
+    display: flex;
+    padding: 40px 40px;
+  }
+  .social-networks-list {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
   }
   #button-submit {
     justify-self: center;
@@ -124,11 +178,25 @@ import FormGroup from './FormGroup.astro'
     background-color: var(--button-active-color);
     transform: scale(0.99);
   }
-  @media (max-width: 320px) {
-    #contact-form {
-      padding: 40px 10px;
-      border-left: none;
-      border-right: none;
+  @media (max-width: 682px) {
+    .main-content {
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 400px) {
+    .main-content {
+      width: 100%;
+      border: none;
+      border-radius: 0;
+    }
+    .contact-form {
+      padding: 40px 20px;
+    }
+    .contact-data {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 0px;
     }
   }
 </style>
