@@ -1,37 +1,25 @@
 ---
-const { title } = Astro.props
+const { title, src } = Astro.props
 ---
 
-<!-- TODO: Create the stack card -->
 <li>
-  <div class="techcard scroll-reveal rotate">
-    <header><h4>{title}</h4></header>
-  </div>
+  <img
+    title={title}
+    class="image-container scroll-reveal"
+    src={src}
+    alt={`${title} logo`}
+  />
 </li>
 
 <style>
-  .techcard {
-    transition: transform 0.3s ease-in;
-  }
-  .rotate {
-    transform: rotate(180deg) scale(0);
+  .image-container {
+    transform: rotate(360deg) scale(0);
+    max-height: 60px;
+    max-width: 60px;
+    color: #fff;
+    transition: transform 0.2s ease-in;
   }
   .active {
     transform: rotate(0deg) scale(1);
-  }
-  h4 {
-    font-size: 12px;
-    font-weight: 900;
-    text-align: center;
-    color: #fff;
-  }
-  div {
-    height: 80px;
-    width: 80px;
-    background-color: var(--secondary-color-button);
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 </style>
