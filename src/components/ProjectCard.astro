@@ -55,7 +55,7 @@ const { id, title, description, techs, img, url, github } = Astro.props
   }
 
   /* Box Shadow Gradient */
-  .project-card-container::after {
+  .project-card-container.active::after {
     content: '';
     background: linear-gradient(90deg, #61dafb, #ef652a);
     position: absolute;
