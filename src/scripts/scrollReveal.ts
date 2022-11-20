@@ -37,6 +37,6 @@ function addObserver({ element, options }: addObserverParams) {
 scrollTrigger({
   selector: '.scroll-reveal',
   options: {
-    rootMargin: '0px',
+    rootMargin: '150px',
   },
 })
