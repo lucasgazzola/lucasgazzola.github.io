@@ -2,8 +2,21 @@
 ---
 
 <section id="about">
-  <header><h3 class="section-title">About Me</h3></header>
-  <main><p class="aboutme-content">Mi nombre es Lucas Gazzola. Soy Desarrollador FullStack. Actualmente estoy estudiando la carrera de Ingeniería en Sistemas de Información en la Universidad Tecnológica Nacional de Villa María.</p></main>
+  <img class="background-image-container" src="/background/background.webp" alt="Background Image">
+  <header>
+    <h3 class="section-title">About Me</h3>
+  </header>
+  <main>
+    <p class="aboutme-content">
+      Mi nombre es <b>Lucas Gazzola</b>. Soy Desarrollador FullStack.
+    </p>
+      <p class="aboutme-content">
+        Actualmente estoy estudiando la carrera de Ingeniería en Sistemas de Información en la Universidad Tecnológica Nacional de Villa María.
+      </p>
+    <p class="aboutme-content">
+      Si necesitas alguna solución de software, no dudes en contactarme.
+    </p>
+  </main>
 </section>
 
 <style is:global>
@@ -15,12 +28,27 @@
 </style>
 
 <style>
+  .aboutme-content{
+    text-align: start;
+    font-size: 1.1rem;
+  }
+  .background-image-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    max-width: 100%;
+    z-index: -1;
+    object-fit: cover;
+    opacity: .15;
+
+  }
   section {
     display: flex;
     flex-direction: column;
   }
   #about{
-    background-color:#0F161D;
+    position: relative;
   }
   main {
     width: 100%;
