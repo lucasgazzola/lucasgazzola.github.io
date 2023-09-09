@@ -1,4 +1,5 @@
 :root {
+  --color-homepage-dark: #0e141b;
   /* --primary-color: rgb(11, 182, 194); */
   --primary-color: #487ce4;
   --secondary-color: rgb(255, 67, 255);
@@ -12,25 +13,24 @@
   --button-active-color: #101d36;
 
   --background-color: #050505;
-  --text-color: #eee;
+  --text-color: #fff;
 
-  --nav-bar-height: 72px;
+  --nav-bar-height: 3rem;
   /* --nav-bar-color: rgb(47, 4, 51); */
-  --nav-bar-color: #111;
+  --nav-bar-color: #0f161dec;
 
   /* --project-background-color: #140235; */
   /* --project-background-color: #05311f; */
   /* --project-background-color: #173e43; */
   --project-background-color: #101820;
 
-  --footer-background-color: #1d428b;
+  --footer-background-color: rgb(0, 70, 135);
 
-  --h1-size: 36px;
-  --h2-size: 30px;
-  --h3-size: 26px;
+  --h1-size: 1.6rem;
+  --h3-size: 2rem;
   --h4-size: 22px;
 
-  --main-font-size: 16px;
+  /* --main-font-size: 16px; */
 
   --hamburger-menu-width-limit: 700px;
 }

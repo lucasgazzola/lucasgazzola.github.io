@@ -31,21 +31,15 @@ const { title } = Astro.props
     <Header />
     <slot />
     <Footer />
-    <div id="tsparticles"></div>
-    <script>
-      import '../tsparticles/tsparticles.ts'
-    </script>
     <style is:global>
       @import '../styles/gobal-variables.css';
-      #tsparticles {
-        position: absolute;
-      }
 
       html {
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         font-family: sans-serif;
         font-size: var(--main-font-size);
-        background-color: var(--background-color);
+        background-color: var(--color-homepage-dark);
+
         scroll-behavior: smooth;
         scroll-padding-top: var(--nav-bar-height);
 
@@ -64,14 +58,12 @@ const { title } = Astro.props
       }
       body {
         color: var(--text-color);
-        min-height: 100vh;
         display: flex;
         flex-direction: column;
-        gap: 36px;
       }
       a,
       button {
-        /* IN MOBILE VERSION, this prevents the anchor 
+        /* IN MOBILE VERSION, this prevents the anchor
         to be selected after being clicked by the user */
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
       }
@@ -79,7 +71,7 @@ const { title } = Astro.props
         list-style-type: none;
       }
       section {
-        padding: 36px 0;
+        padding: 5rem 0;
         gap: 72px;
         width: 100%;
         display: flex;

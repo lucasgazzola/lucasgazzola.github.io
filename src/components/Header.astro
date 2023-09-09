@@ -17,10 +17,10 @@ import LinksList from './LinksList.astro'
         />
       </span>
     </a>
-    <HamburgerMenuButton />
+    <!-- <HamburgerMenuButton /> -->
     <LinksList />
   </div>
-  <DropdownMenu />
+  <!-- <DropdownMenu /> -->
 </header>
 
 <style>
@@ -41,13 +41,14 @@ import LinksList from './LinksList.astro'
       text-decoration: underline;
     }
     .logo-image:hover {
-      transform: scale(1.05);
+      transform: translateY(-1px);
+      transition: transform 0.5s ease-in;
     }
   }
 
   .logo-image {
-    width: auto;
-    height: 2rem;
+    height: 1.4rem;
+    transition: transform 0.5s ease-out;
   }
 
   header {
@@ -56,6 +57,7 @@ import LinksList from './LinksList.astro'
     width: 100%;
     height: var(--nav-bar-height);
     background-color: var(--nav-bar-color);
+    box-shadow: 0 .1rem 1rem #1C262F;
     z-index: 1000;
   }
 
