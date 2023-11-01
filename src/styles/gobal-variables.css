@@ -1,7 +1,7 @@
 :root {
   --color-homepage-dark: #0e141b;
   /* --primary-color: rgb(11, 182, 194); */
-  --primary-color: #487ce4;
+  --primary-color: rgb(229, 245, 255);
   --secondary-color: rgb(255, 67, 255);
   --third-color: rgb(20, 207, 45);
 
@@ -9,7 +9,7 @@
   --secondary-color-button: rgb(164 20 207 / 60%);
   --third-color-button: rgb(20 207 45 / 60%);
 
-  --button-hover-color: #30577c;
+  --button-hover-color: #09f9;
   --button-active-color: #101d36;
 
   --background-color: #050505;

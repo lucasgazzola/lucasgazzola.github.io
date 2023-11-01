@@ -67,6 +67,7 @@ const socialNetworks = [
           >
         </FormGroup>
       </form>
+      <div class="separator"></div>
       <div class="contact-data">
         <h4 class="contact-data-title">My networks</h4>
         <ul class="social-networks-list">
@@ -82,12 +83,18 @@ const socialNetworks = [
 </section>
 
 <style>
+  #contact {
+    background: linear-gradient(0deg, #0e141b, #1a242c);
+  }
   .opacity-reveal {
     opacity: 0;
   }
   .active {
     opacity: 1;
     transition: opacity 0.2s ease-in;
+  }
+  label {
+    font-weight: 600;
   }
 
   input {
@@ -114,17 +121,23 @@ const socialNetworks = [
   textarea:focus {
     background-color: #fff;
   }
-  #contact{
-    background: linear-gradient(0deg, #0E141B,#1A242C);
-  }
 
+  /* .contact-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
   .contact-main {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* background: linear-gradient(45deg, #1b2631, #004687d2);
+    border-radius: 0.5rem;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
   }
+
   .contact-form {
-    max-width: 300px;
     min-width: 270px;
     display: flex;
     flex-direction: column;
@@ -132,19 +145,30 @@ const socialNetworks = [
   }
   .main-content {
     position: relative;
-    padding: 40px 20px;
-    height: max-content;
+    padding: 80px 0;
+    /* height: max-content; */
     display: inline-flex;
-    gap: 3rem;
-    /* border: 1px solid #487ce488; */
-    border-radius: .5rem;
+    gap: 4rem;
+    max-width: 1200px;
+    width: 100%;
+    height: 450px;
+    border: 1px solid #f2aa4c22;
+    border-radius: 0.5rem;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(0deg,#182128,#0E141B);
+    /* background: linear-gradient(0deg, #182128, #0e141b); */
+    background: linear-gradient(45deg, #1b2631, #004687d2);
+    box-shadow: inset 0 0px 20px #172028;
+    /* background: linear-gradient(45deg, #1b2631, #081622); */
     /* opacity: 0; */
-    width: 80ch;
-    max-width: 80ch;
+    /* min-width: 90ch; */
+    /* max-width: 90ch; */
     z-index: 500;
+  }
+  .separator {
+    height: 90%;
+    width: 1px;
+    background-color: #fff;
   }
   .contact-data {
     min-width: 270px;
@@ -167,6 +191,7 @@ const socialNetworks = [
     justify-content: center;
     /* align-items: stretch; */
   }
+
   #button-submit {
     justify-self: center;
     width: 100%;
@@ -175,7 +200,7 @@ const socialNetworks = [
     font-weight: 800;
     outline: none;
     border: none;
-    background-color: var(--footer-background-color);
+    background-color: #09f;
     /* opacity: 75%; */
     color: #fff;
     border-radius: 6px;
@@ -190,10 +215,17 @@ const socialNetworks = [
     background-color: var(--button-active-color);
     transform: scale(0.99);
   }
+
   @media (max-width: 682px) {
     .main-content {
       flex-direction: column;
+      height: 100%;
       gap: 2rem;
+    }
+    .separator {
+      height: 1px;
+      width: 80%;
+      background-color: #fff;
     }
     .contact-data {
       width: 100%;

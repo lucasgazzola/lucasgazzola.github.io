@@ -16,7 +16,7 @@ const techStack = [
   { id: 12, title: 'GitHub' },
   { id: 13, title: 'Prisma' },
   { id: 14, title: 'VSCode' },
-  { id: 15, title: 'Figma' },
+  { id: 15, title: 'Linux' },
 ]
 ---
 
@@ -46,8 +46,18 @@ const techStack = [
     max-width: 650px;
   }
 
-  #stack{
-    background: linear-gradient(0deg, #191b29,#121920);
+  #stack {
+    /* background: linear-gradient(0deg, #191b29, #121920); */
+    background: linear-gradient(120deg, #0f161d, #1a242b, #131b22);
+    /* box-shadow: 0 10px 20px rgb(255, 255, 255); */
+    /* border-bottom: 2px solid #f2aa4c21; */
+  }
+  #stack::after {
+    content: '';
+    display: block;
+    height: 50px;
+    width: 100%;
+    background: linear-gradient(180deg, transparent, #131b22);
   }
 
   @media (max-width: 760px) {

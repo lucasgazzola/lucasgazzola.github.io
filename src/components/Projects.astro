@@ -32,7 +32,7 @@ const projects = [
     id: 2,
     title: 'Title of the project',
     description:
-      'Lorem ipsum dolor siasdt, amet consectetur adipisicing elit. Laborum, quaerat atque et sunt quas molestiae doloremque asdcommodi nisi quod mollitia id recusandae facilis illum repellendus distinctio, ad, minusasdasd laboriosam amet.',
+      'Lorem ipsum dolecusandae facilis illum repellendus distinctio, ad, minusasdasd laboriosam amet.',
     techs: ['MongoDB', 'React'],
     img: {
       src: '',
@@ -45,7 +45,7 @@ const projects = [
     id: 3,
     title: 'Title of the project',
     description:
-      'Lorem ipsum doasdasdlor sit, amet consectetur adipisicing eliasdt. asd Lasdaaborum, quaerat atque et sunt quas molestiae doloremque commodiasd nisi quod mollitia id recusandae facilis illum repellendus distinctio, ad, minus laboriosam amet.',
+      'Lorem ipsum dd mollitia id recusandae facilis illum repellendus distinctio, ad, minus laboriosam amet.',
     techs: ['PostgreSQL', 'React', 'Socket.io'],
     img: {
       src: '',
@@ -64,15 +64,26 @@ const projects = [
 
 <style>
   ul {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     width: 100%;
-    align-items: center;
+    max-width: 3600px;
+    padding: 1rem;
     justify-content: center;
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1rem;
   }
 
-  #projects{
-    background: linear-gradient(0deg, #1A242C,#191b29);
+  #projects {
+    align-items: center;
+    /* background: linear-gradient(0deg, #1a242c, #191b29); */
+    background: linear-gradient(90deg, #0f161d, #1a242b, #131b22);
+    /* border-bottom: 2px solid #f2aa4c21; */
+  }
+  #projects::after {
+    content: '';
+    display: block;
+    height: 20px;
+    width: 100%;
+    background: linear-gradient(180deg, transparent, #131b22);
   }
 </style>
