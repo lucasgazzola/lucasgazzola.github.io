@@ -1,60 +1,7 @@
 ---
 import ProjectCard from './ProjectCard.astro'
 
-const projects = [
-  {
-    id: 0,
-    title: 'Title of the project',
-    description:
-      'Lorem ipsum dolor sit, amet consectetur aasdasddipisicing elit. Laborum, quaerat atque et sunt quas molestiae doloremque commodi nisi quod mollitia id recusandae facilis illum repellendus distinctio, ad, minus laboriosam amet.',
-    techs: ['React', 'Next'],
-    img: {
-      src: '',
-      alt: 'image description',
-    },
-    url: '',
-    github: '',
-  },
-  {
-    id: 1,
-    title: 'Title of the project',
-    description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, quaerat atque et sunt quas molestiae doloremque asdcommodi nisi asdasdquod mollitia id recusandae facilis illum repellendus distinctio, ad, minus laboriosam amet.',
-    techs: ['Angular', 'Node'],
-    img: {
-      src: '',
-      alt: 'image description',
-    },
-    url: '',
-    github: '',
-  },
-  {
-    id: 2,
-    title: 'Title of the project',
-    description:
-      'Lorem ipsum dolecusandae facilis illum repellendus distinctio, ad, minusasdasd laboriosam amet.',
-    techs: ['MongoDB', 'React'],
-    img: {
-      src: '',
-      alt: 'image description',
-    },
-    url: '',
-    github: '',
-  },
-  {
-    id: 3,
-    title: 'Title of the project',
-    description:
-      'Lorem ipsum dd mollitia id recusandae facilis illum repellendus distinctio, ad, minus laboriosam amet.',
-    techs: ['PostgreSQL', 'React', 'Socket.io'],
-    img: {
-      src: '',
-      alt: 'image description',
-    },
-    url: '',
-    github: '',
-  },
-]
+import { projects } from '../utils/info'
 ---
 
 <section id="projects">
@@ -85,5 +32,10 @@ const projects = [
     height: 20px;
     width: 100%;
     background: linear-gradient(180deg, transparent, #131b22);
+  }
+  @media (max-width: 682px) {
+    ul {
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
   }
 </style>

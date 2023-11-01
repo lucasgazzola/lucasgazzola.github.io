@@ -1,6 +1,6 @@
 ---
-import HamburgerMenuButton from './HamburgerMenuButton.astro'
-import DropdownMenu from './DropdownMenu.astro'
+// import HamburgerMenuButton from './HamburgerMenuButton.astro'
+// import DropdownMenu from './DropdownMenu.astro'
 import LinksList from './LinksList.astro'
 // import logo from '../assets/logo-modified.svg'
 // const logo = '<LJ />'
@@ -25,6 +25,10 @@ import LinksList from './LinksList.astro'
 
 <style>
   span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     font-weight: 600;
     font-size: 1.2rem;
   }
@@ -68,13 +72,18 @@ import LinksList from './LinksList.astro'
     width: 100%;
     height: 100%;
     background-color: inherit;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     z-index: 100;
   }
-  @media (max-width: 1900px) {
+  @media (max-width: 600px) {
     .header-content {
-      justify-content: space-between;
+      gap: 1rem;
+    }
+  }
+  @media (min-width: 1800px) {
+    .header-content {
+      justify-content: space-evenly;
     }
   }
 </style>

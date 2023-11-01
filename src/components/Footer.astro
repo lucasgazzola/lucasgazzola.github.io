@@ -1,15 +1,24 @@
+---
+const actualYear = new Date().getFullYear()
+import { socialNetworks } from '../utils/info'
+---
+
 <footer>
-  <div><p>Lucas Gazzola - 2022</p></div>
-  <div>
-    <p>
-      Made with 🚀️<a
-        href="https://astro.build/"
-        target="_blank"
-        referrerpolicy="no-referrer"
-        rel="noopener noreferrer">Astro</a
-      >
-    </p>
-  </div>
+  <p>Lucas Gazzola - {actualYear}</p>
+  <p class="social-icons-list">
+    {
+      socialNetworks.map(network => (
+        <a href={network.href}>
+          <img
+            src={`/sociallogos/${network.network.toLowerCase()}.svg`}
+            alt=""
+            width="24px"
+            srcset=""
+          />
+        </a>
+      ))
+    }
+  </p>
 </footer>
 
 <style>
@@ -24,12 +33,18 @@
   }
   footer {
     position: relative;
-    height: 80px;
+    height: 120px;
     padding: 0 12px;
     background-color: var(--footer-background-color);
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
     align-items: center;
     z-index: 500;
+  }
+  .social-icons-list {
+    display: flex;
+    gap: 1rem;
   }
 </style>
