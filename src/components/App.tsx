@@ -153,7 +153,7 @@ export default function App() {
                   <div>
                     <h4 className="font-medium">Desarrollo Web Frontend</h4>
                     <p className="text-sm text-muted-foreground">
-                      Autodidacta • Desde 2022
+                      Autodidacta • Desde 2021
                     </p>
                   </div>
                 </div>
@@ -290,7 +290,7 @@ export default function App() {
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
           <div className="text-center md:text-left">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Tu Nombre. Todos los derechos
+              © {new Date().getFullYear()} Lucas Gazzola. Todos los derechos
               reservados.
             </p>
           </div>
