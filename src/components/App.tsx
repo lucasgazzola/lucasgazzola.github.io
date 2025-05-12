@@ -15,15 +15,13 @@ export default function App() {
           <div className="absolute inset-0 bg-grid-pattern" />
         </div>
         <div className="container relative z-10 flex flex-col items-center justify-center max-w-4xl gap-8 text-center">
-          <div className="relative w-32 h-32 overflow-hidden rounded-full border-4 border-[#7C3AED]/20">
-            {/* <Image
-              src="/placeholder.svg?height=128&width=128"
-              alt="Foto de perfil"
-              fill
-              className="object-cover"
-              priority
-            /> */}
+          <div className="relative w-32 h-32 overflow-hidden rounded-full border-4 bg-[#7C3AED] border-white/80">
+            <img
+              className="translate-x-1 object-cover w-full h-full"
+              src="/heroimage.png"
+            />
           </div>
+
           <div className="space-y-4">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
               <span className="text-[#7C3AED]">Hola, soy </span>
