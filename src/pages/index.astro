@@ -1,16 +1,23 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Main from '../components/Main.astro'
-import AboutMe from '../components/AboutMe.astro'
-import TechStack from '../components/TechStack.astro'
-import Projects from '../components/Projects.astro'
-import Contact from '../components/Contact.astro'
+import '../styles/global.css'
+// Component Imports
+import Button from '../components/Button.astro'
+import App from '@/components/App'
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/basics/astro-components/
 ---
 
-<Layout title="Lucas Gazzola - FullStack Dev">
-  <Main />
-  <AboutMe />
-  <TechStack />
-  <Projects />
-  <Contact />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro + TailwindCSS</title>
+  </head>
+
+  <body class="min-h-screen w-full">
+    <App client:load />
+  </body>
+</html>
