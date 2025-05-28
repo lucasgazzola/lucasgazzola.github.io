@@ -1,13 +1,37 @@
-# Astro with Tailwind
+# 👋 ¡Hola! Soy Lucas Gazzola
 
-```sh
-npm create astro@latest -- --template with-tailwindcss
-```
+🎓 Estudiante de Ingeniería en Sistemas  
+💻 Desarrollador Frontend autodidacta  
+🌐 [lucasgazzola.github.io](https://lucasgazzola.github.io)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/with-tailwindcss)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/with-tailwindcss)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/with-tailwindcss/devcontainer.json)
+---
 
-Astro comes with [Tailwind](https://tailwindcss.com) support out of the box. This example showcases how to style your Astro project with Tailwind.
+## 🚀 Sobre mí
 
-For complete setup instructions, please see our [Tailwind Integration Guide](https://docs.astro.build/en/guides/integrations-guide/tailwind).
+Soy un apasionado del desarrollo web con un enfoque en la creación de interfaces modernas y accesibles. Actualmente, estoy profundizando mis conocimientos en **React**, **Next.js** y explorando el backend con **Node.js** y **MongoDB** para convertirme en un desarrollador fullstack.
+
+---
+
+## 🛠️ Tecnologías y herramientas
+
+- **Frontend:** HTML, CSS, JavaScript (ES2022), React, Next.js
+- **Backend:** Node.js, MongoDB
+- **Herramientas:** Git, GitHub, VSCode, Figma, Postman
+- **Explorando:** React Native, Python, Spring Boot, Electron.js
+
+---
+
+## 💻 Échale un vistazo
+
+- **Portfolio personal:** [lucasgazzola.github.io](https://lucasgazzola.github.io)  
+  Mi sitio personal donde muestro mis proyectos y habilidades.
+---
+
+## 📫 Contacto
+
+- [LinkedIn](https://www.linkedin.com/in/lucasgazzola/)
+- [WhatsApp](https://api.whatsapp.com/send/?phone=5493467446259&text=¡Hola,%20Lucas!&type=phone_number&app_absent=0)
+
+---
+
+¡Gracias por visitar mi perfil! Estoy abierto a oportunidades y colaboraciones. 🚀
